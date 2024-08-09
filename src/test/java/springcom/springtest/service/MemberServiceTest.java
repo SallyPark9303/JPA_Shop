@@ -33,7 +33,7 @@ class MemberServiceTest {
 
     @Test
     @Rollback(false)
-    public void 회원가입() throws Exception{
+    public void 회원가입() throws Exception {
         //given
         Member member = new Member();
         member.setMemName("kim");
@@ -44,9 +44,6 @@ class MemberServiceTest {
         assertEquals(member,memberRepository.findOne(savedId));
         //then
     }
-
-
-
 
     @Test
     public void 중복_회원_예외() throws Exception{
