@@ -26,6 +26,13 @@ public class OrderItem {
     private int orderPrice; // 주문 가격
     private int count; // 주문 수량
 
+    // 여러군데서 생성 되는것을 막음
+    // 직접생성하지 않고 생성 메서드나 다른방법으로 생성해야 한다는 것을 알려줌,
+    // 이런식으로 제약하는 스타일로 짜는 것이 좋음 -> 좋은 설계외 유지보수가 가능
+    protected  OrderItem(){
+        
+    }
+
     //==생성 메서드==//
     public static OrderItem createOrderItem(Item item , int orderPrice, int count){
         OrderItem orderItem = new OrderItem();
