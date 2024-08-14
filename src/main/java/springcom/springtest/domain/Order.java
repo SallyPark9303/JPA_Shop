@@ -47,6 +47,7 @@ public class Order {
     }
 
     //==생성 메서드==//
+    // 생성하는 지점에서 이 메서드만 변경하면됨
     public static Order createOrder(Member member, Delivery delivery, OrderItem... orderItems){
         Order order = new Order();
         order.setMember(member);
