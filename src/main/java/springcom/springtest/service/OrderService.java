@@ -17,7 +17,7 @@ public class OrderService {
     private final OrderRepository orderRepository;
 
     private final MemberRepository memberRepository;
-    private final ItemRepository itemRepository
+    private final ItemRepository itemRepository;
 
     // 주문
     public Long order(Long memberId, Long itemId, int count) {
