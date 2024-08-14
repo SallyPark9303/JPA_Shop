@@ -8,6 +8,9 @@ import springcom.springtest.domain.Item.Item;
 import springcom.springtest.repository.ItemRepository;
 import springcom.springtest.repository.MemberRepository;
 import springcom.springtest.repository.OrderRepository;
+import springcom.springtest.repository.OrderSearch;
+
+import java.util.List;
 
 @Service
 @Transactional(readOnly = true)
@@ -40,6 +43,13 @@ public class OrderService {
 
 
     }
+    //검색
+    public List<Order> findOrders(OrderSearch orderSearch) {
+        return orderRepository.findAllByString(orderSearch);
+    }
+
+
+
 
     //취소
     public void cancelOrder(Long orderId){
